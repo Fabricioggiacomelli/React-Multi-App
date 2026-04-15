@@ -1,0 +1,95 @@
+.contador-container {
+  max-width: 400px;
+  margin: 60px auto;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 40px 32px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.contador-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1e3a5f;
+  margin-bottom: 32px;
+}
+
+.contador-display {
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 40px;
+  transition: color 0.3s ease;
+}
+
+.contador-display.positive {
+  color: #4caf8a;
+}
+
+.contador-display.negative {
+  color: #e55555;
+}
+
+.contador-display.zero {
+  color: #1e3a5f;
+}
+
+.contador-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  border: none;
+  border-radius: 12px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.btn-increment,
+.btn-decrement {
+  width: 64px;
+  height: 64px;
+  font-size: 2rem;
+}
+
+.btn-increment {
+  background: #4caf8a;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(76, 175, 138, 0.4);
+}
+
+.btn-increment:hover {
+  background: #3d9e7a;
+}
+
+.btn-decrement {
+  background: #e55555;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(229, 85, 85, 0.4);
+}
+
+.btn-decrement:hover {
+  background: #cc4444;
+}
+
+.btn-reset {
+  padding: 14px 28px;
+  font-size: 1rem;
+  background: #f0f4f8;
+  color: #1e3a5f;
+  border: 2px solid #d0d8e4;
+}
+
+.btn-reset:hover {
+  background: #e0e8f0;
+}
