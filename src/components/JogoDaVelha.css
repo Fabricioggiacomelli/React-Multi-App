@@ -1,0 +1,142 @@
+.jogo-container {
+  max-width: 440px;
+  margin: 40px auto;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 36px 32px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.jogo-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1e3a5f;
+  margin-bottom: 24px;
+}
+
+/* Placar */
+.jogo-placar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+
+.placar-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 24px;
+  border-radius: 12px;
+  border: 2px solid transparent;
+  transition: all 0.2s;
+}
+
+.placar-item.ativo {
+  border-color: #2d6a9f;
+  background: #f0f6ff;
+}
+
+.placar-simbolo {
+  font-size: 1.6rem;
+  font-weight: 900;
+}
+
+.placar-simbolo.x { color: #2d6a9f; }
+.placar-simbolo.o { color: #e55555; }
+
+.placar-pontos {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.placar-vs {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #aaa;
+}
+
+/* Status */
+.jogo-status {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 20px;
+  height: 28px;
+  transition: color 0.2s;
+}
+
+.jogo-status.ganhou { color: #4caf8a; }
+.jogo-status.empate { color: #f0a500; }
+
+/* Tabuleiro */
+.jogo-tabuleiro {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.celula {
+  aspect-ratio: 1;
+  background: #f7f9fc;
+  border: 2px solid #d0d8e4;
+  border-radius: 12px;
+  font-size: 2.4rem;
+  font-weight: 900;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+  color: transparent;
+}
+
+.celula:hover:not(.x):not(.o) {
+  background: #e8f0fa;
+  transform: scale(0.97);
+}
+
+.celula.x { color: #2d6a9f; }
+.celula.o { color: #e55555; }
+
+.celula.vencedora {
+  background: #eafaf3;
+  border-color: #4caf8a;
+  transform: scale(1.04);
+}
+
+/* Ações */
+.jogo-acoes {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.btn-novo,
+.btn-reset-placar {
+  padding: 10px 22px;
+  border-radius: 10px;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-novo {
+  background: #2d6a9f;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(45, 106, 159, 0.35);
+}
+
+.btn-novo:hover { background: #1e3a5f; }
+
+.btn-reset-placar {
+  background: #f0f4f8;
+  color: #555;
+  border: 2px solid #d0d8e4;
+}
+
+.btn-reset-placar:hover { background: #e0e8f0; }

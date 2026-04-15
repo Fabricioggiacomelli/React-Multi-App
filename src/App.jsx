@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Header from './components/Header';
 import TodoList from './components/TodoList';
 import Contador from './components/Contador';
+import JogoDaVelha from './components/JogoDaVelha';
 
 function App() {
   const [activeTab, setActiveTab] = useState('todo');
@@ -13,7 +14,7 @@ function App() {
       case 'contador':
         return <Contador />;
       case 'jogo':
-        return null;
+        return <JogoDaVelha />;
       case 'calculadora':
         return null;
       case 'cep':
