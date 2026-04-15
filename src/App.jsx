@@ -3,6 +3,7 @@ import Header from './components/Header';
 import TodoList from './components/TodoList';
 import Contador from './components/Contador';
 import JogoDaVelha from './components/JogoDaVelha';
+import Calculadora from './components/Calculadora';
 
 function App() {
   const [activeTab, setActiveTab] = useState('todo');
@@ -16,7 +17,7 @@ function App() {
       case 'jogo':
         return <JogoDaVelha />;
       case 'calculadora':
-        return null;
+        return <Calculadora />;
       case 'cep':
         return null;
       default:

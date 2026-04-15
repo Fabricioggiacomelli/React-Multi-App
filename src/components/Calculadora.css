@@ -1,0 +1,111 @@
+.calc-container {
+  max-width: 360px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.calc-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1e3a5f;
+  margin-bottom: 20px;
+}
+
+.calc-body {
+  background: #1a1a2e;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+}
+
+.calc-display {
+  background: #0f0f1a;
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+  text-align: right;
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 4px;
+}
+
+.calc-sub {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.calc-valor {
+  font-size: 2.4rem;
+  font-weight: 300;
+  color: #ffffff;
+  word-break: break-all;
+  line-height: 1;
+}
+
+.calc-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.calc-btn {
+  aspect-ratio: 1;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: filter 0.1s, transform 0.1s;
+}
+
+.calc-btn:active {
+  filter: brightness(1.3);
+  transform: scale(0.95);
+}
+
+.calc-btn.numero {
+  background: #333355;
+  color: #ffffff;
+}
+
+.calc-btn.numero:hover {
+  background: #444466;
+}
+
+.calc-btn.funcao {
+  background: #4a4a6a;
+  color: #ffffff;
+}
+
+.calc-btn.funcao:hover {
+  background: #5a5a7a;
+}
+
+.calc-btn.operador {
+  background: #2d6a9f;
+  color: #ffffff;
+}
+
+.calc-btn.operador:hover {
+  background: #3a7fbf;
+}
+
+.calc-btn.igual {
+  background: #4caf8a;
+  color: #ffffff;
+}
+
+.calc-btn.igual:hover {
+  background: #3d9e7a;
+}
+
+/* Botão 0 ocupa 2 colunas */
+.calc-btn.zero {
+  grid-column: span 2;
+  aspect-ratio: unset;
+  border-radius: 40px;
+  text-align: left;
+  padding-left: 28px;
+}
